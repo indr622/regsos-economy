@@ -60,3 +60,5 @@ end
 gem 'dotenv-rails', groups: [:development, :test, :production]
 
 gem "devise", "~> 4.9"
+
+gem "avo", ">= 3.2.1"

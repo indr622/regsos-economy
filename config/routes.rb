@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :areas
+  mount Avo::Engine, at: Avo.configuration.root_path
   devise_for :users
    # Defines the root path route ("/")
   root 'pages#index'
