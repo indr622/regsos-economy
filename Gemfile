@@ -56,3 +56,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'dotenv-rails', groups: [:development, :test, :production]
+
+gem "devise", "~> 4.9"

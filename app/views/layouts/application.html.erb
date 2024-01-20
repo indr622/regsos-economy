@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div>
+    <%= link_to "Home", root_path %>
+    <% if user_signed_in? %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= link_to "Profile",edit_user_registration_path %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+  </div>
+  <%= yield %>
   </body>
 </html>
